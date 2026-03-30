@@ -1,0 +1,39 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #0A0F0D;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  background: #0A0F0D;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Standard pages — scrollable */
+.layout-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Chat page — full viewport height, no footer, no scroll */
+.layout-full {
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
