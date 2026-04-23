@@ -1,0 +1,804 @@
+[
+{
+"name": "5-aminosalicylic Acid",
+"composition": ["5-aminosalicylic acid"],
+"dosageForm": "Suppository",
+"strength": "500 mg",
+"unit": "1 Suppository",
+"price": 21.42,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "5-aminosalicylic Acid",
+"composition": ["Mesalazine"],
+"dosageForm": "Retention Enema (Foam)",
+"strength": "",
+"unit": "1 GM",
+"price": 17.00,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "5-aminosalicylic Acid",
+"composition": ["Mesalazine"],
+"dosageForm": "Retention Enema (Liquid)",
+"strength": "",
+"unit": "1 ML",
+"price": 2.16,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "5-aminosalicylic Acid",
+"composition": ["Mesalazine"],
+"dosageForm": "Tablet",
+"strength": "400 mg",
+"unit": "1 Tablet",
+"price": 8.06,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "5-Fluorouracil",
+"composition": ["Fluorouracil"],
+"dosageForm": "Injection",
+"strength": "250 mg/5 ml",
+"unit": "1 ML",
+"price": 2.08,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "6-Mercaptopurine",
+"composition": ["Mercaptopurine"],
+"dosageForm": "Tablet",
+"strength": "50 mg",
+"unit": "1 Tablet",
+"price": 5.35,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Abacavir",
+"composition": ["Abacavir"],
+"dosageForm": "Tablet",
+"strength": "300 mg",
+"unit": "1 Tablet",
+"price": 49.44,
+"category": "Antiviral",
+"source": "NPPA"
+},
+{
+"name": "Abacavir + Lamivudine",
+"composition": ["Abacavir", "Lamivudine"],
+"dosageForm": "Tablet",
+"strength": "60 mg + 30 mg",
+"unit": "1 Tablet",
+"price": 25.44,
+"category": "Antiviral",
+"source": "NPPA"
+},
+{
+"name": "Acetazolamide",
+"composition": ["Acetazolamide"],
+"dosageForm": "Tablet",
+"strength": "250 mg",
+"unit": "1 Tablet",
+"price": 4.13,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Acetazolamide",
+"composition": ["Acetazolamide"],
+"dosageForm": "Capsule",
+"strength": "250 mg",
+"unit": "1 Capsule",
+"price": 5.14,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Acetylsalicylic Acid",
+"composition": ["Aspirin"],
+"dosageForm": "Tablet",
+"strength": "75 mg",
+"unit": "1 Tablet",
+"price": 0.36,
+"category": "Painkiller",
+"source": "NPPA"
+},
+{
+"name": "Acetylsalicylic Acid",
+"composition": ["Aspirin"],
+"dosageForm": "Tablet",
+"strength": "150 mg",
+"unit": "1 Tablet",
+"price": 0.51,
+"category": "Painkiller",
+"source": "NPPA"
+},
+{
+"name": "Actinomycin D",
+"composition": ["Actinomycin D"],
+"dosageForm": "Injection",
+"strength": "0.5 mg",
+"unit": "1 Vial",
+"price": 336.79,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Acyclovir",
+"composition": ["Acyclovir"],
+"dosageForm": "Tablet",
+"strength": "400 mg",
+"unit": "1 Tablet",
+"price": 13.90,
+"category": "Antiviral",
+"source": "NPPA"
+},
+{
+"name": "Acyclovir",
+"composition": ["Acyclovir"],
+"dosageForm": "Injection",
+"strength": "250 mg",
+"unit": "1 Vial",
+"price": 433.82,
+"category": "Antiviral",
+"source": "NPPA"
+},
+{
+"name": "Albendazole",
+"composition": ["Albendazole"],
+"dosageForm": "Tablet",
+"strength": "400 mg",
+"unit": "1 Tablet",
+"price": 7.16,
+"category": "Antiparasitic",
+"source": "NPPA"
+},
+{
+"name": "Allopurinol",
+"composition": ["Allopurinol"],
+"dosageForm": "Tablet",
+"strength": "300 mg",
+"unit": "1 Tablet",
+"price": 5.73,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Amikacin",
+"composition": ["Amikacin"],
+"dosageForm": "Injection",
+"strength": "250 mg/ml",
+"unit": "1 ML",
+"price": 55.11,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Amitriptyline",
+"composition": ["Amitriptyline"],
+"dosageForm": "Tablet",
+"strength": "25 mg",
+"unit": "1 Tablet",
+"price": 2.53,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Amlodipine",
+"composition": ["Amlodipine"],
+"dosageForm": "Tablet",
+"strength": "5 mg",
+"unit": "1 Tablet",
+"price": 2.54,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Albendazole",
+"composition": ["Albendazole"],
+"dosageForm": "Chewable Tablet",
+"strength": "400 mg",
+"unit": "1 Tablet",
+"price": 8.27,
+"category": "Antiparasitic",
+"source": "NPPA"
+},
+{
+"name": "All-trans Retinoic Acid",
+"composition": ["Retinoic Acid"],
+"dosageForm": "Capsule",
+"strength": "10 mg",
+"unit": "1 Capsule",
+"price": 103.62,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Allopurinol",
+"composition": ["Allopurinol"],
+"dosageForm": "Tablet",
+"strength": "100 mg",
+"unit": "1 Tablet",
+"price": 1.92,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Alprostadil",
+"composition": ["Alprostadil"],
+"dosageForm": "Injection",
+"strength": "0.5 mg/ml",
+"unit": "1 ML",
+"price": 6213.02,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amiodarone",
+"composition": ["Amiodarone"],
+"dosageForm": "Tablet",
+"strength": "200 mg",
+"unit": "1 Tablet",
+"price": 11.71,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amiodarone",
+"composition": ["Amiodarone"],
+"dosageForm": "Tablet",
+"strength": "100 mg",
+"unit": "1 Tablet",
+"price": 6.25,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amiodarone",
+"composition": ["Amiodarone"],
+"dosageForm": "Injection",
+"strength": "50 mg/ml",
+"unit": "1 ML",
+"price": 21.50,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amitriptyline",
+"composition": ["Amitriptyline"],
+"dosageForm": "Tablet",
+"strength": "50 mg",
+"unit": "1 Tablet",
+"price": 6.09,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Amitriptyline",
+"composition": ["Amitriptyline"],
+"dosageForm": "Tablet",
+"strength": "75 mg",
+"unit": "1 Tablet",
+"price": 5.54,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Amitriptyline",
+"composition": ["Amitriptyline"],
+"dosageForm": "Tablet",
+"strength": "10 mg",
+"unit": "1 Tablet",
+"price": 2.43,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Amlodipine",
+"composition": ["Amlodipine"],
+"dosageForm": "Tablet",
+"strength": "2.5 mg",
+"unit": "1 Tablet",
+"price": 1.82,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amlodipine",
+"composition": ["Amlodipine"],
+"dosageForm": "Tablet",
+"strength": "10 mg",
+"unit": "1 Tablet",
+"price": 5.54,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Amoxicillin",
+"composition": ["Amoxicillin"],
+"dosageForm": "Capsule",
+"strength": "250 mg",
+"unit": "1 Capsule",
+"price": 2.48,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Amoxicillin",
+"composition": ["Amoxicillin"],
+"dosageForm": "Capsule",
+"strength": "500 mg",
+"unit": "1 Capsule",
+"price": 7.49,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Amoxicillin",
+"composition": ["Amoxicillin"],
+"dosageForm": "Oral Liquid",
+"strength": "125 mg/5 ml",
+"unit": "1 ML",
+"price": 1.04,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Amoxicillin + Clavulanic Acid",
+"composition": ["Amoxicillin", "Clavulanic Acid"],
+"dosageForm": "Tablet",
+"strength": "500 mg + 125 mg",
+"unit": "1 Tablet",
+"price": 18.62,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Amphotericin B",
+"composition": ["Amphotericin B"],
+"dosageForm": "Injection",
+"strength": "50 mg/vial",
+"unit": "1 Vial",
+"price": 231.36,
+"category": "Antifungal",
+"source": "NPPA"
+},
+{
+"name": "Ampicillin",
+"composition": ["Ampicillin"],
+"dosageForm": "Injection",
+"strength": "500 mg",
+"unit": "1 Vial",
+"price": 14.50,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Ampicillin",
+"composition": ["Ampicillin"],
+"dosageForm": "Injection",
+"strength": "1 gm",
+"unit": "1 Vial",
+"price": 25.35,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Anti-rabies immunoglobulin",
+"composition": ["Rabies Immunoglobulin"],
+"dosageForm": "Injection",
+"strength": "150 IU/ml",
+"unit": "1 ML",
+"price": 3161.67,
+"category": "Vaccine",
+"source": "NPPA"
+},
+{
+"name": "Anti-tetanus immunoglobulin",
+"composition": ["Tetanus Immunoglobulin"],
+"dosageForm": "Injection",
+"strength": "250 IU",
+"unit": "1 Vial",
+"price": 1266.45,
+"category": "Vaccine",
+"source": "NPPA"
+},
+{
+"name": "Artesunate",
+"composition": ["Artesunate"],
+"dosageForm": "Injection",
+"strength": "60 mg",
+"unit": "1 Vial",
+"price": 248.99,
+"category": "Antimalarial",
+"source": "NPPA"
+},
+{
+"name": "Artemether + Lumefantrine",
+"composition": ["Artemether", "Lumefantrine"],
+"dosageForm": "Tablet",
+"strength": "40 mg + 240 mg",
+"unit": "1 Tablet",
+"price": 18.35,
+"category": "Antimalarial",
+"source": "NPPA"
+}
+,
+{
+"name": "Artesunate + Sulphadoxine + Pyrimethamine",
+"composition": ["Artesunate", "Sulphadoxine", "Pyrimethamine"],
+"dosageForm": "Combi pack",
+"strength": "200 mg (A) + 2 tablets (750 mg + 37.5 mg)",
+"unit": "1 Combi Pack",
+"price": 46.24,
+"category": "Antimalarial",
+"source": "NPPA"
+},
+{
+"name": "Artesunate + Sulphadoxine + Pyrimethamine",
+"composition": ["Artesunate", "Sulphadoxine", "Pyrimethamine"],
+"dosageForm": "Combi pack",
+"strength": "125 mg (A) + 1 tablet (500 mg + 25 mg)",
+"unit": "1 Combi Pack",
+"price": 24.91,
+"category": "Antimalarial",
+"source": "NPPA"
+},
+{
+"name": "Ascorbic Acid (Vitamin C)",
+"composition": ["Ascorbic Acid"],
+"dosageForm": "Tablet",
+"strength": "100 mg",
+"unit": "1 Tablet",
+"price": 0.24,
+"category": "Vitamins",
+"source": "NPPA"
+},
+{
+"name": "Ascorbic Acid (Vitamin C)",
+"composition": ["Ascorbic Acid"],
+"dosageForm": "Tablet",
+"strength": "500 mg",
+"unit": "1 Tablet",
+"price": 1.57,
+"category": "Vitamins",
+"source": "NPPA"
+},
+{
+"name": "Atazanavir + Ritonavir",
+"composition": ["Atazanavir", "Ritonavir"],
+"dosageForm": "Tablet",
+"strength": "300 mg + 100 mg",
+"unit": "1 Tablet",
+"price": 101.57,
+"category": "Antiviral",
+"source": "NPPA"
+},
+{
+"name": "Atorvastatin",
+"composition": ["Atorvastatin"],
+"dosageForm": "Tablet",
+"strength": "40 mg",
+"unit": "1 Tablet",
+"price": 19.64,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Atorvastatin",
+"composition": ["Atorvastatin"],
+"dosageForm": "Tablet",
+"strength": "20 mg",
+"unit": "1 Tablet",
+"price": 12.78,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Atorvastatin",
+"composition": ["Atorvastatin"],
+"dosageForm": "Tablet",
+"strength": "10 mg",
+"unit": "1 Tablet",
+"price": 5.06,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Atorvastatin",
+"composition": ["Atorvastatin"],
+"dosageForm": "Tablet",
+"strength": "80 mg",
+"unit": "1 Tablet",
+"price": 41.29,
+"category": "Cardiac",
+"source": "NPPA"
+},
+{
+"name": "Atracurium",
+"composition": ["Atracurium"],
+"dosageForm": "Injection",
+"strength": "10 mg/ml",
+"unit": "1 ML",
+"price": 17.28,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Atropine",
+"composition": ["Atropine"],
+"dosageForm": "Drops",
+"strength": "1%",
+"unit": "1 ML",
+"price": 4.01,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Atropine",
+"composition": ["Atropine"],
+"dosageForm": "Ointment",
+"strength": "1%",
+"unit": "1 GM",
+"price": 4.79,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Atropine",
+"composition": ["Atropine"],
+"dosageForm": "Injection",
+"strength": "0.6 mg/ml",
+"unit": "1 ML",
+"price": 6.98,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Azathioprine",
+"composition": ["Azathioprine"],
+"dosageForm": "Tablet",
+"strength": "50 mg",
+"unit": "1 Tablet",
+"price": 11.46,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Azithromycin",
+"composition": ["Azithromycin"],
+"dosageForm": "Tablet",
+"strength": "250 mg",
+"unit": "1 Tablet",
+"price": 11.87,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Azithromycin",
+"composition": ["Azithromycin"],
+"dosageForm": "Tablet",
+"strength": "500 mg",
+"unit": "1 Tablet",
+"price": 23.98,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Azithromycin",
+"composition": ["Azithromycin"],
+"dosageForm": "Oral Liquid",
+"strength": "200 mg/5 ml",
+"unit": "1 ML",
+"price": 3.47,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Azithromycin",
+"composition": ["Azithromycin"],
+"dosageForm": "Capsule",
+"strength": "250 mg",
+"unit": "1 Capsule",
+"price": 10.80,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Azithromycin",
+"composition": ["Azithromycin"],
+"dosageForm": "Capsule",
+"strength": "500 mg",
+"unit": "1 Capsule",
+"price": 19.36,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Baclofen",
+"composition": ["Baclofen"],
+"dosageForm": "Tablet",
+"strength": "20 mg",
+"unit": "1 Tablet",
+"price": 16.56,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Baclofen",
+"composition": ["Baclofen"],
+"dosageForm": "Tablet",
+"strength": "10 mg",
+"unit": "1 Tablet",
+"price": 12.11,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Baclofen",
+"composition": ["Baclofen"],
+"dosageForm": "Tablet",
+"strength": "5 mg",
+"unit": "1 Tablet",
+"price": 6.48,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "BCG Vaccine",
+"composition": ["BCG"],
+"dosageForm": "Injection",
+"strength": "As licensed",
+"unit": "Each Pack",
+"price": 8.15,
+"category": "Vaccine",
+"source": "NPPA"
+},
+{
+"name": "Bendamustine Hydrochloride",
+"composition": ["Bendamustine"],
+"dosageForm": "Injection",
+"strength": "100 mg/vial",
+"unit": "1 Vial",
+"price": 5032.89,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Benzathine Benzyl Penicillin",
+"composition": ["Penicillin"],
+"dosageForm": "Injection",
+"strength": "12 lac units",
+"unit": "1 Vial",
+"price": 20.15,
+"category": "Antibiotic",
+"source": "NPPA"
+},
+{
+"name": "Benzoyl Peroxide",
+"composition": ["Benzoyl Peroxide"],
+"dosageForm": "Gel",
+"strength": "2.5%",
+"unit": "1 GM",
+"price": 3.68,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Benzoyl Peroxide",
+"composition": ["Benzoyl Peroxide"],
+"dosageForm": "Gel",
+"strength": "5%",
+"unit": "1 GM",
+"price": 8.11,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Betamethasone",
+"composition": ["Betamethasone"],
+"dosageForm": "Injection",
+"strength": "4 mg/ml",
+"unit": "1 ML",
+"price": 4.82,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Betamethasone",
+"composition": ["Betamethasone"],
+"dosageForm": "Gel",
+"strength": "0.05%",
+"unit": "1 GM",
+"price": 0.67,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Bisacodyl",
+"composition": ["Bisacodyl"],
+"dosageForm": "Tablet",
+"strength": "5 mg",
+"unit": "1 Tablet",
+"price": 1.19,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "Bisacodyl",
+"composition": ["Bisacodyl"],
+"dosageForm": "Suppository",
+"strength": "5 mg",
+"unit": "1 Suppository",
+"price": 10.15,
+"category": "Gastro",
+"source": "NPPA"
+},
+{
+"name": "Bleomycin",
+"composition": ["Bleomycin"],
+"dosageForm": "Injection",
+"strength": "15 units",
+"unit": "1 Vial",
+"price": 689.20,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Bortezomib",
+"composition": ["Bortezomib"],
+"dosageForm": "Injection",
+"strength": "2 mg",
+"unit": "1 Vial",
+"price": 5352.05,
+"category": "Cancer",
+"source": "NPPA"
+},
+{
+"name": "Budesonide",
+"composition": ["Budesonide"],
+"dosageForm": "Inhalation (MDI)",
+"strength": "100 mcg/dose",
+"unit": "1 Dose",
+"price": 1.43,
+"category": "Respiratory",
+"source": "NPPA"
+},
+{
+"name": "Budesonide",
+"composition": ["Budesonide"],
+"dosageForm": "Inhalation (MDI)",
+"strength": "200 mcg/dose",
+"unit": "1 Dose",
+"price": 2.07,
+"category": "Respiratory",
+"source": "NPPA"
+},
+{
+"name": "Bupivacaine",
+"composition": ["Bupivacaine"],
+"dosageForm": "Injection",
+"strength": "0.5%",
+"unit": "1 ML",
+"price": 4.50,
+"category": "General",
+"source": "NPPA"
+},
+{
+"name": "Buprenorphine",
+"composition": ["Buprenorphine"],
+"dosageForm": "Tablet (Sublingual)",
+"strength": "0.4 mg",
+"unit": "1 Tablet",
+"price": 9.59,
+"category": "General",
+"source": "NPPA"
+}
+
+]

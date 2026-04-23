@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+
 import "./Medicines.css";
 
 // ── MOCK DATA ──
@@ -112,7 +113,12 @@ function ReportModal({ medicine, onClose }) {
         </div>
         <p className="modal-sub">Reporting: <strong>{medicine.name}</strong></p>
         <div className="modal-field"><label>Store Name</label><input type="text" placeholder="e.g. MedPlus, Sector 12" /></div>
-        <div className="modal-field"><label>Price Charged (₹)</label><input type="number" placeholder="e.g. 85.00" /></div>
+        <div className="modal-field"><label>Price Charged (₹)</label>
+          <input
+            type="number"
+            value={medicine.userPrice || ""}
+            readOnly
+          /></div>
         <div className="modal-field">
           <label>Upload Bill / Photo</label>
           <div className="upload-zone">
@@ -132,10 +138,12 @@ function ReportModal({ medicine, onClose }) {
 
 // ── DETAIL VIEW (Search Result) ──
 function MedicineDetail({ medicine, onBack, onReport }) {
-  const diff = priceDiff(medicine.govtPrice, medicine.retailPrice);
-  const isOver = medicine.retailPrice > medicine.govtPrice;
-  const overAmount = (medicine.retailPrice - medicine.govtPrice).toFixed(2);
-
+  const userPrice = medicine.userPrice || medicine.retailPrice || 0;
+  const isOver = userPrice > medicine.govtPrice;
+  const diff = userPrice
+    ? (((userPrice - medicine.govtPrice) / medicine.govtPrice) * 100).toFixed(1)
+    : 0;
+  const overAmount = (userPrice - medicine.govtPrice).toFixed(2);
   return (
     <div className="detail-view">
       <button className="back-btn" onClick={onBack}>
@@ -183,7 +191,7 @@ function MedicineDetail({ medicine, onBack, onReport }) {
                 <div className="price-box-divider" />
                 <div className="price-box-item">
                   <div className="price-box-label">Retail Price Charged</div>
-                  <div className={`price-box-value ${isOver ? "red" : "green"}`}>₹{medicine.retailPrice.toFixed(2)}</div>
+                  <div className={`price-box-value ${isOver ? "red" : "green"}`}>₹{userPrice.toFixed(2)}</div>
                 </div>
                 <div className="price-box-divider" />
                 <div className="price-box-item">
@@ -278,27 +286,62 @@ function MedicineDetail({ medicine, onBack, onReport }) {
 }
 
 // ── BROWSE VIEW (Grid) ──
-function BrowseView({ initialQuery }) {
+function BrowseView({ initialQuery, medicinesData, setSelectedMed }) {
   const [query, setQuery] = useState(initialQuery || "");
   const [category, setCategory] = useState("All Medicines");
   const [statusFilter, setStatusFilter] = useState("All");
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState("Relevance");
   const [reportMed, setReportMed] = useState(null);
+  const [userPrices, setUserPrices] = useState({});
   const fileRef = useRef(null);
 
-  const filtered = MEDICINES.filter((m) => {
-    const matchQ = m.name.toLowerCase().includes(query.toLowerCase()) || m.generic.toLowerCase().includes(query.toLowerCase());
-    const matchCat = category === "All Medicines" || m.category === category;
-    const matchStatus = statusFilter === "All" || statusMap[m.status] === statusFilter;
-    const matchPrice = m.govtPrice <= maxPrice;
-    return matchQ && matchCat && matchStatus && matchPrice;
-  }).sort((a, b) => {
-    if (sort === "Price: Low to High") return a.govtPrice - b.govtPrice;
-    if (sort === "Price: High to Low") return b.govtPrice - a.govtPrice;
-    if (sort === "Most Reported") return b.reports - a.reports;
-    return 0;
-  });
+  const dataSource = medicinesData.length
+    ? medicinesData.map((m, index) => {
+
+      //  m is valid ONLY HERE
+      const basePrice = m.price || 0;
+
+
+      return {
+        id: index,
+        name: m.name || "",
+        generic: (m.composition && m.composition[0]) ? m.composition[0] : "",
+        form: m.dosageForm || "",
+        pack: m.unit || "",
+        category: m.category || "General",
+        govtPrice: basePrice,
+        retailPrice: 0,
+        store: "SafeMeds",
+        manufacturer: "NPPA",
+        status: "ok",
+        description: m.name || "",
+        sideEffects: "",
+        alternatives: [],
+        reports: Math.floor(Math.random() * 20),
+      };
+
+    })
+    : MEDICINES;
+
+  const filtered = dataSource
+    .filter((m) => {
+      const matchQ =
+        m.name.toLowerCase().includes(query.toLowerCase()) ||
+        (m.generic || "").toLowerCase().includes(query.toLowerCase());
+      const matchCat =
+        category === "All Medicines" || m.category === category;
+      const matchStatus =
+        statusFilter === "All" || statusMap[m.status] === statusFilter;
+      const matchPrice = m.govtPrice <= maxPrice;
+      return matchQ && matchCat && matchStatus && matchPrice;
+    })
+    .sort((a, b) => {
+      if (sort === "Price: Low to High") return a.govtPrice - b.govtPrice;
+      if (sort === "Price: High to Low") return b.govtPrice - a.govtPrice;
+      if (sort === "Most Reported") return b.reports - a.reports;
+      return 0;
+    });
 
   return (
     <>
@@ -334,7 +377,7 @@ function BrowseView({ initialQuery }) {
             {CATEGORIES.map((cat) => (
               <div key={cat} className={`filter-chip ${category === cat ? "active" : ""}`} onClick={() => setCategory(cat)}>
                 <div className="filter-dot" /><span>{cat}</span>
-                <span className="filter-count">{cat === "All Medicines" ? MEDICINES.length : MEDICINES.filter((m) => m.category === cat).length}</span>
+                <span className="filter-count">{cat === "All Medicines" ? dataSource.length : dataSource.filter((m) => m.category === cat).length}</span>
               </div>
             ))}
           </div>
@@ -375,10 +418,18 @@ function BrowseView({ initialQuery }) {
           ) : (
             <div className="med-grid">
               {filtered.map((m) => {
-                const diff = priceDiff(m.govtPrice, m.retailPrice);
-                const isOver = m.retailPrice > m.govtPrice;
+
                 return (
-                  <div className="med-card" key={m.id}>
+                  <div
+                    className="med-card"
+                    key={m.id}
+                    onClick={() =>
+                      setSelectedMed({
+                        ...m,
+                        userPrice: Number(userPrices[m.id] || 0),
+                      })
+                    }
+                  >
                     <div className="med-card-top">
                       <div className="med-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#00C48C" strokeWidth="1.6" strokeLinecap="round"><path d="M10.5 3.5a6 6 0 0 1 6 6v5a6 6 0 0 1-12 0v-5a6 6 0 0 1 6-6z" /><line x1="4.5" y1="11" x2="16.5" y2="11" /></svg>
@@ -392,15 +443,60 @@ function BrowseView({ initialQuery }) {
                     <div className="price-govt-label">Govt Ceiling Price</div>
                     <div className="price-row">
                       <span className="price-govt-val">₹{m.govtPrice.toFixed(2)}</span>
-                      {m.retailPrice !== m.govtPrice && <span className="price-retail-val">₹{m.retailPrice.toFixed(2)}</span>}
-                      <span className={`price-diff ${isOver ? "diff-over" : "diff-ok"}`}>{isOver ? `+${diff}% over` : "Within limit"}</span>
+
+                      <input
+                        type="number"
+                        placeholder="Enter your price"
+                        value={userPrices[m.id] || ""}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={(e) =>
+                          setUserPrices({
+                            ...userPrices,
+                            [m.id]: e.target.value
+                          })
+                        }
+                        style={{
+                          marginTop: "10px",
+                          padding: "6px",
+                          borderRadius: "6px",
+                          border: "1px solid #ccc",
+                          width: "200px"
+                        }}
+                      />
                     </div>
+                    {userPrices[m.id] && (
+                      <div style={{ marginTop: "6px" }}>
+                        {Number(userPrices[m.id]) > m.govtPrice ? (
+                          <span style={{ color: "red", fontWeight: "500" }}>
+                            ⚠ Overpriced by ₹
+                            {(Number(userPrices[m.id]) - m.govtPrice).toFixed(2)}(
+                            {(((Number(userPrices[m.id]) - m.govtPrice) / m.govtPrice) * 100).toFixed(1)}%)
+                          </span>
+                        ) : (
+                          <span style={{ color: "green", fontWeight: "500" }}>
+                            ✓ Within govt limit
+                          </span>
+                        )}
+                      </div>
+                    )}
                     <div className="med-card-footer">
                       <div className="med-store">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
                         {m.store}
                       </div>
-                      <button className="report-btn" onClick={() => setReportMed(m)}>Report</button>
+                      <button
+                        className="report-btn"
+                        disabled={!userPrices[m.id] || Number(userPrices[m.id]) <= 0}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setReportMed({
+                            ...m,
+                            userPrice: userPrices[m.id] ? Number(userPrices[m.id]) : null,
+                          });
+                        }}
+                      >
+                        Report
+                      </button>
                     </div>
                   </div>
                 );
@@ -417,21 +513,56 @@ function BrowseView({ initialQuery }) {
 
 // ── MAIN COMPONENT ──
 export default function Medicines() {
+  const [medicinesData, setMedicinesData] = useState([]);
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get("search") || "";
   const [selectedMed, setSelectedMed] = useState(null);
   const [reportMed, setReportMed] = useState(null);
 
+  useEffect(() => {
+    fetch("http://localhost:5000/api/medicines")
+      .then(res => res.json())
+      .then(data => setMedicinesData(data))
+      .catch(err => console.log(err));
+  }, []);
+
+
   // Auto-select medicine if came from home page search
   useEffect(() => {
     if (searchQuery) {
-      const found = MEDICINES.find((m) =>
+
+      const dataSource = medicinesData.length
+        ? medicinesData.map((m, index) => ({
+          id: index,
+          name: m.name,
+          generic: (m.composition && m.composition[0]) ? m.composition[0] : "",
+          form: m.dosageForm || "",
+          pack: m.unit || "",
+          category: m.category || "General",
+          govtPrice: m.price || 0,
+          store: "SafeMeds",
+          manufacturer: "NPPA",
+          status: "ok",
+          retailPrice: 0,
+          description: m.name,
+          sideEffects: "",
+          alternatives: [],
+          reports: 0,
+        }))
+        : MEDICINES;
+
+      const found = dataSource.find((m) =>
         m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         m.generic.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      if (found) setSelectedMed(found);
+
+      if (found)
+        setSelectedMed({
+          ...found,
+          userPrice: 0,
+        });
     }
-  }, [searchQuery]);
+  }, [searchQuery, medicinesData]);
 
   return (
     <main className="medicines">
@@ -442,7 +573,11 @@ export default function Medicines() {
           onReport={() => setReportMed(selectedMed)}
         />
       ) : (
-        <BrowseView initialQuery={searchQuery} />
+        <BrowseView
+          initialQuery={searchQuery}
+          medicinesData={medicinesData}
+          setSelectedMed={setSelectedMed}
+        />
       )}
       {reportMed && <ReportModal medicine={reportMed} onClose={() => setReportMed(null)} />}
     </main>

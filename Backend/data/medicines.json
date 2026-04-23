@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Paracetamol",
+    "composition": ["Paracetamol"],
+    "dosageForm": "Tablet",
+    "strength": "500 mg",
+    "unit": "1 Tablet",
+    "price": 2.5,
+    "category": "General",
+    "source": "NPPA",
+    "lastUpdated": "2025-06-03"
+  },
+  {
+    "name": "Amoxicillin",
+    "composition": ["Amoxicillin"],
+    "dosageForm": "Capsule",
+    "strength": "500 mg",
+    "unit": "1 Capsule",
+    "price": 7.49,
+    "category": "Antibiotic",
+    "source": "NPPA",
+    "lastUpdated": "2025-06-03"
+  }
+]

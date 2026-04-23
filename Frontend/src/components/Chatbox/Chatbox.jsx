@@ -126,20 +126,19 @@ export default function Chatbox() {
         .filter((m) => m.role === "user" || m.role === "assistant")
         .map((m) => ({ role: m.role, content: m.content }));
 
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("http://localhost:5000/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1000,
-          system: SYSTEM_PROMPT,
-          messages: conversationMessages,
+          message: content,
         }),
       });
 
       const data = await response.json();
-      const aiText = data.content?.[0]?.text || "Sorry, I couldn't process that. Please try again.";
-
+      const aiText = data.reply || "Sorry, I couldn't process that.";
+      
       setMessages((prev) => [...prev, {
         id: Date.now() + 1,
         role: "assistant",
@@ -199,7 +198,7 @@ export default function Chatbox() {
             ))}
           </div>
 
-          <div className="sidebar-footer" style={{display:"none"}} />
+          <div className="sidebar-footer" style={{ display: "none" }} />
         </aside>
 
         {/* ── MAIN CHAT ── */}
@@ -238,8 +237,8 @@ export default function Chatbox() {
           {/* Disclaimer Banner */}
           <div className="disclaimer-banner">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />
             </svg>
             <p>⚕ SafeMeds AI gives informational guidance only. Always consult a licensed doctor for medical advice.</p>
           </div>
